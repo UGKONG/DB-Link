@@ -6,7 +6,7 @@ const ContextMenu = ({data, state}) => {
   const not = () => alert('준비중입니다.');
   return (
     <Menu state={state}>
-      <NavLink to={'/' + data.seq}>상세보기</NavLink>
+      <NavLink to={'/Document/' + data.seq}>상세보기</NavLink>
       <Link to="/" onClick={not}>이름변경</Link>
       <Link to="/" onClick={not}>삭제</Link>
     </Menu>

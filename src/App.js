@@ -4,7 +4,7 @@ import Header from "./Header";
 import Documents from "./pages/Documents";
 import MyPage from "./pages/MyPage";
 import Setting from "./pages/Setting";
-import NotPage from "./pages/NotPage";
+import Database from "./pages/Database";
 import Alert from "./other/Alert";
 
 export const Store = React.createContext();
@@ -19,6 +19,7 @@ function App() {
   const [_documents, _setDocuments] = useState([]);
   const [sort, setSort] = useState('modifyDate');
   const [hash, setHash] = useState('/');
+  const [headerYN, setHeaderYN] = useState(true);
 
   useEffect(() => {
     setHash(window.location.hash.replace('#', ''));
@@ -31,6 +32,7 @@ function App() {
   return (
     <Store.Provider value={{
       hash, setHash,
+      headerYN, setHeaderYN,
       documents, setDocuments,
       _documents, _setDocuments,
       sort, setSort, 
@@ -40,10 +42,11 @@ function App() {
 
       <Switch>
         <Route exact path={ '/' } component={ Documents }/>
+        <Route exact path={ '/Document' } component={ Documents }/>
         <Route exact path={ '/MyPage' } component={ MyPage }/>
         <Route exact path={ '/Setting' } component={ Setting }/>
 
-        <Route component={ NotPage }/>
+        <Route exact path={ '/Document/:id' } component={ Database }/>
       </Switch>
     </Store.Provider>
   );
