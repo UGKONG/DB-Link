@@ -81,6 +81,7 @@ const Menu = Styled.div`
   border-right: none !important;
   margin: 0 !important;
   position: relative !important;
+  z-index: 9;
 `;
 const DatabaseHeader = Styled.header`
   height: 42px;
@@ -89,7 +90,9 @@ const DatabaseHeader = Styled.header`
   background: #fff;
   font-weight: 400;
   border: 1px solid rgba(34,36,38,.15);
-  box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%)
+  box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
+  position: relative;
+  z-index: 9;
 `;
 const BackBtnStyle = {
   display: 'flex',

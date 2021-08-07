@@ -9,7 +9,11 @@ const Database = () => {
   const store = useContext(Store);
   const [data, setData] = useState({});
   const [categoryList, setCategoryList] = useState([
-    '부평 11번가', '뉴딜참여', '주민공동체', '상권활성화', '스마트시티'
+    {seq: 1, name: '부평 11번가'}, 
+    {seq: 2, name: '뉴딜참여'}, 
+    {seq: 3, name: '주민공동체'}, 
+    {seq: 4, name: '상권활성화'}, 
+    {seq: 5, name: '스마트시티'}
   ])
   const { id } = useParams();
 
@@ -56,10 +60,13 @@ const Title = Styled.h2`
   color: #999;
   border-bottom: 1px solid #eee;
   margin-bottom: 0;
+  position: relative;
+  z-index: 9;
 `;
 const ContentContainer = Styled.div`
   width: 100%;
   height: calc(100% - 44px);
   background-color: ${({bg}) => bg ? '#c0cfdd' : 'transparent'};
   position: relative;
+  overflow: hidden;
 `;

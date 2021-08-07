@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import Styled from 'styled-components';
 
 const Side = ({Common, list}) => {
+
+  const categoryDrag = (e) => {
+    console.log(e)
+  }
+
   return (
     <NavWrap>
       <Common.Div>
@@ -10,7 +15,9 @@ const Side = ({Common, list}) => {
           <Ul>
             {list.map((li, i) => {
               return (
-                <Li key={i}>{li}</Li>
+                <Li key={li.seq} onDrag={categoryDrag}>
+                  {li.name}
+                </Li>
               )
             })}
           </Ul>
@@ -26,6 +33,7 @@ const NavWrap = Styled.nav`
   width: 250px;
   height: 100%;
   padding: 10px;
+  z-index: 9;
 `;
 const Ul = Styled.ul`
   height: calc(100% - 10px);
