@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
 import Styled from 'styled-components';
 
-const Board = ({ Common, list }) => {
+const Board = ({ Common, wrapRef, tableRef }) => {
+
   return (
     <Canvas>
       <Common.Div>
         <Common.Title>TABLE</Common.Title>
-        <Common.ContentContainer bg={true}>
-          <Content>
-            <Table className="table" />
-          </Content>
+        <Common.ContentContainer
+          bg={true}
+          display={'flex'}
+          ref={wrapRef}
+          className="wrap"
+        >
+          <Content
+            ref={tableRef}
+            className="content"
+          />
         </Common.ContentContainer>
       </Common.Div>
     </Canvas>
@@ -25,20 +32,11 @@ const Canvas = Styled.article`
   position: relative;
 `;
 const Content = Styled.div`
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   min-width: 100%;
   min-height: 100%;
   box-sizing: content-box !important;
   overflow: hidden;
   padding: 200px;
-`;
-const Table = Styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 9;
   cursor: move;
 `;

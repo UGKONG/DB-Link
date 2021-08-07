@@ -42,11 +42,11 @@ function App() {
 
       <Switch>
         <Route exact path={ '/' } component={ Documents }/>
-        <Route exact path={ '/Document' } component={ Documents }/>
+        <Route exact path={ '/' } component={ Documents }/>
         <Route exact path={ '/MyPage' } component={ MyPage }/>
         <Route exact path={ '/Setting' } component={ Setting }/>
 
-        <Route exact path={ '/Document/:id' } component={ Database }/>
+        <Route exact path={ '/:id' } component={ Database }/>
       </Switch>
     </Store.Provider>
   );

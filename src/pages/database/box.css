@@ -1,0 +1,67 @@
+article.box {
+  width: auto;
+  min-width: 150px;
+  max-width: 200px;
+  float: left;
+  margin: 10px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  cursor: default;
+  overflow: hidden;
+  transition: .2s;
+  opacity: 1;
+  white-space: nowrap;
+}
+article.box > h2 {
+  font-size: 12px;
+  font-weight: 700;
+  position: relative;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  cursor: move;
+}
+article.box > h2 > div.xBtnWrap {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+article.box > h2 > div.xBtnWrap:hover span {
+  background-color: #333;
+}
+article.box > h2 > div.xBtnWrap > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+article.box > h2 > div.xBtnWrap > div > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 10px;
+  display: block;
+  background-color: #999;
+}
+article.box > h2 > div.xBtnWrap > div > span:first-of-type {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+article.box > h2 > div.xBtnWrap > div > span:last-of-type {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+article.box > ul > li {
+  padding: 4px 0;
+  font-size: 12px;
+  text-align: center;
+  background: #e8e3d9;
+  cursor: pointer;
+}
+article.box > ul > li:hover {
+  background: #ccc5b9;
+}

@@ -16,7 +16,7 @@ const Header = () => {
   const BackBtnClick = useCallback(() => {
     let setHash = store.setHash;
     let setHeaderYN = store.setHeaderYN;
-    setHash('/Document');
+    setHash('/');
     setHeaderYN(true);
   }, [store.setHash, store.setHeaderYN]);
 
@@ -28,8 +28,8 @@ const Header = () => {
     return (
       <Menu className="ui menu">
         <NavLink exact 
-          to={'/Document'}
-          name="/Document"
+          to={'/'}
+          name="/"
           className="item" 
           activeClassName="active"
           style={{outline: "none"}}
@@ -60,7 +60,7 @@ const Header = () => {
     return (
       <DatabaseHeader>
         <NavLink
-          to={'/Document'}
+          to={'/'}
           style={BackBtnStyle}
           onClick={BackBtnClick}>
           <i className="icon chevron left" style={iStyle} />
