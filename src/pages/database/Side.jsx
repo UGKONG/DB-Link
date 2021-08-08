@@ -22,12 +22,7 @@ const Side = ({Common, categoryList, fieldList, wrapRef, tableRef}) => {
     let startY = $(wrapRef.current).offset().top; // 테이블 시작 위치
     let endX = startX + $(wrapRef.current).outerWidth(); // 테이블 종료 위치
     let endY = startY + $(wrapRef.current).outerHeight(); // 테이블 종료 위치
-    if (
-      mouseX > startX &&
-      endX > mouseX &&
-      mouseY > startY &&
-      endY > mouseY
-    ) {
+    if (mouseX > startX && endX > mouseX && mouseY > startY && endY > mouseY) {
       let id = Number(e.target.id);
       let data = categoryList.find(e => e.seq === id);
       let list = fieldList.filter(e => e.category === id);
@@ -42,11 +37,9 @@ const Side = ({Common, categoryList, fieldList, wrapRef, tableRef}) => {
           </h2>
           <ul>
             {list.map(data => (
-              <li
-                className={data.seq}
-                title={data.name}
-                key={data.seq}
-              >{data.name}</li>
+              <li className={data.seq} title={data.name} key={data.seq}>
+                {data.name}
+              </li>
             ))}
           </ul>
         </>, box
@@ -63,12 +56,9 @@ const Side = ({Common, categoryList, fieldList, wrapRef, tableRef}) => {
           <Ul>
             {categoryList.map(li => {
               return (
-                <Li
-                  id={li.seq}
-                  key={li.seq}
-                  onDragEnd={onDragEnd}
-                  draggable={true}
-                >{li.name}</Li>
+                <Li id={li.seq} key={li.seq} onDragEnd={onDragEnd} draggable={true}>
+                  {li.name}
+                </Li>
               )
             })}
           </Ul>
@@ -106,6 +96,3 @@ const Li = Styled.li`
     background-color: #e1e9e1;
   }
 `;
-const boxStyle = {
-  
-}

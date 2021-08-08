@@ -20,10 +20,6 @@ const Header = () => {
     setHeaderYN(true);
   }, [store.setHash, store.setHeaderYN]);
 
-  useEffect(() => { // 임시
-    console.log(store);
-  });
-
   const justHeader = useMemo(() => {
     return (
       <Menu className="ui menu">

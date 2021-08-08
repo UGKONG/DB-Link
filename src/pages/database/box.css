@@ -3,7 +3,7 @@ article.box {
   min-width: 150px;
   max-width: 200px;
   float: left;
-  margin: 10px;
+  margin: 10px 17px;
   background: #fff;
   border-radius: 6px;
   border: 1px solid #ddd;
@@ -12,6 +12,7 @@ article.box {
   transition: .2s;
   opacity: 1;
   white-space: nowrap;
+  box-shadow: 1px 2px 3px #77777750;
 }
 article.box > h2 {
   font-size: 12px;
@@ -56,7 +57,7 @@ article.box > h2 > div.xBtnWrap > div > span:last-of-type {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 article.box > ul > li {
-  padding: 4px 0;
+  padding: 4px 8px;
   font-size: 12px;
   text-align: center;
   background: #e8e3d9;
