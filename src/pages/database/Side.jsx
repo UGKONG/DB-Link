@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery';
 import Styled from 'styled-components';
+import $ from 'jquery';
 
 const Side = ({Common, categoryList, fieldList, wrapRef, tableRef}) => {
 
